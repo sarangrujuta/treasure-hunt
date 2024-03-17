@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Navigate the cryptic trails </h2>
+        
+        <img src="mountains_front.png" id="mountains_front">
+
+    </section>
+    <div class="sec" id="sec" >
+        <h2>Uncover hidden treasures</h2>
+        <p1>"In the land where time takes flight,A treasure waits in sight.Admist the echoes of the past,The key to time shall be unmasked."</p1>
+        <p2></p2>
+    </div>
+    <script>
+        let stars=document.getElementById('stars');
+        let moon=document.getElementById('moon');
+        let mountains_behind=document.getElementById('mountains_behind');
+        let text=document.getElementById('text');
+        let mountains_front=document.getElementById('mountains_front');
+        let header= document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left= value  * 0.005 + 'px';
+            moon.style.top= value  * 1.05 + 'px';
+            mountains_behind.style.top= value  * 0.05 + 'px';
+            mountains_front.style.top= value  * 0 + 'px';
+            text.style.marginRight = value * 1.05 + 'px';
+            text.style.marginTop = value *  0.0005 + 'px';
+            header.style.top = value * 0.005 +'px';
+           
+        })
+    </script>
+</body>
+</html>
